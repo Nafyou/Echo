@@ -16,23 +16,38 @@ public class Post extends ParseObject {
     public String getKeyLanguage(){
         return getString(KEY_LANGUAGE);
     }
-    public void String setKeyLanguage(String language){
+
+    public void setKeyLanguage(String language){
         put(KEY_LANGUAGE, language);
     }
-
-    public String getKeyRecording(){
-        return getString(KEY_RECORDING);
-    }
+// Different TODO:Figure out parseFile syntax for getting recording.
+//    public String getKeyRecording(){
+//        return getString(KEY_RECORDING);
+//    }
+// Do something different( parse file)
+//    public void setKeyRecording(String recording){
+//        put(KEY_LANGUAGE, recording);
+//    }
 
     public String getKeyTranslation(){
         return getString(KEY_TRANSLATION);
     }
-
+    public void setKeyTranslation(String translation){
+        put(KEY_LANGUAGE, translation);
+    }
     public String getKeyUser(){
         return getString(KEY_USER);
     }
+    public void setKeyUser(String user){
+        put(KEY_LANGUAGE, user);
+    }
+
     public String getKeyCategory(){
         return getString(KEY_CATEGORY);
+    }
+
+    public void setKeyCategory(String category){
+        put(KEY_LANGUAGE, category);
     }
 
 
