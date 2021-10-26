@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.instagram_clone.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
