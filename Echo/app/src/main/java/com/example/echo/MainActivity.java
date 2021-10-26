@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.VideoView;
 
-import com.example.instagram_clone.R;
+import com.example.echo.R;
 
 import java.io.File;
 
