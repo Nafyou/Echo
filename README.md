@@ -83,18 +83,46 @@ An app that allows users to record themselves saying phrases in their language, 
    * Compose
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/c60KTXL.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### User
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+| objectId | String | unique id for the user (default field)|
+| username | String | name of the user |
+| password | String | password for loggin in |
+| createdAt | DateTime | date when user was created |
+
+#### Post
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+| objectId | String | unique id for the user post (default field)|
+| username | Pointer to User | author of post |
+| recording | File | audio file of recording |
+| language | String | language of the recording |
+| translation | String | translation of the recording |
+| category | String | category of recording |
+| transliteration | String | transliteration of recording |
+| createdAt | DateTime | date when post was created (default field) |
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### List of network requests by screen
+- Login/Registration Screen
+    - (Read/GET) Query in user object
+    - (Create/USER) Create a new user
+- Home/Community Feed Screen
+    - (Read/GET) Query all posts
+- Create Post Screen
+    - (Create/POST) Create a new post object
+- Profile/Personal Feed Screen
+    - (Read/GET) Query logged in user object
+    - (Read/GET) Query all posts where user is the author
+
+**[Create basic snippets for each Parse network request]**
+**[OPTIONAL: List endpoints if using existing API such as Yelp]**
