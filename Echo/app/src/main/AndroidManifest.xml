@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Echo">
         <activity
-            android:name="com.example.echo.MainActivity"
+            android:name="com.example.echo.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name="com.example.echo.MainActivity" />
+
     </application>
 
 </manifest>
