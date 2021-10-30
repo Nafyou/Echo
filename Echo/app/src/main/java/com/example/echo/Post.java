@@ -32,12 +32,15 @@ public class Post extends ParseObject {
     public String getKeyTranslation(){
         return getString(KEY_TRANSLATION);
     }
+
     public void setKeyTranslation(String translation){
         put(KEY_LANGUAGE, translation);
     }
+
     public String getKeyUser(){
         return getString(KEY_USER);
     }
+
     public void setKeyUser(String user){
         put(KEY_LANGUAGE, user);
     }
@@ -49,7 +52,5 @@ public class Post extends ParseObject {
     public void setKeyCategory(String category){
         put(KEY_LANGUAGE, category);
     }
-
-
 
 }
