@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.echo.Post;
-import com.example.echo.PostsAdapter;
+//import com.example.echo.PostsAdapter;
 import com.example.echo.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -39,7 +39,7 @@ public class PostsFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /* TODO: Make Posts then uncomment
+    /* TODO: Make PostsAdapter then uncomment
     // Clean all elements of the recycler
     public void clear() {
         allPosts.clear();
@@ -68,26 +68,28 @@ public class PostsFragment extends Fragment {
             @Override
             public void onRefresh() {
                 Log.i(TAG, "fetching new data");
-                queryPosts();
+                //queryPosts();
             }
         });
 
         rvPosts = view.findViewById(R.id.rvPosts);
 
-        allPosts = new ArrayList<>();
-        adapter = new PostsAdapter(getContext(), allPosts);
+        // TODO: Uncomment after adding PostsAdapter
+        //allPosts = new ArrayList<>();
+        //adapter = new PostsAdapter(getContext(), allPosts);
 
         // Steps to use the recycler view:
         // 0. create layout for one row in the list
         // 1. create the adapter
         // 2. create the data source
         // 3. set the adapter on the recycler view
-        rvPosts.setAdapter(adapter);
+        //rvPosts.setAdapter(adapter);
         // 4. set the layout manager on the recycle view
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
-        queryPosts();
+        //queryPosts();
     }
 
+    /* TODO: Uncomment and edit after cleaning up Posts and making PostsAdapter
     protected void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
@@ -112,4 +114,6 @@ public class PostsFragment extends Fragment {
             }
         });
     }
+
+     */
 }
