@@ -36,16 +36,19 @@ public class Post extends ParseObject {
     public String getKeyTranslation(){
         return getString(KEY_TRANSLATION);
     }
+
     public void setKeyTranslation(String translation){
         put(KEY_LANGUAGE, translation);
     }
 
-    //public ParseUser getUser(){
-    //    return getParseUser(KEY_USER);
-    //}
-    //public void setKeyUser(String user){
-     //   put(KEY_LANGUAGE, user);
-    //}
+
+    public ParseUser getUser(){
+       return getParseUser(KEY_USER);
+    }
+    public void setKeyUser(String user){
+       put(KEY_LANGUAGE, user);
+    }
+
 
     public String getKeyCategory(){
         return getString(KEY_CATEGORY);
@@ -53,6 +56,7 @@ public class Post extends ParseObject {
     public void setKeyCategory(String category){
         put(KEY_CATEGORY, category);
     }
+
 
     public String getKeyPhrase(){
         return getString(KEY_PHRASE);
@@ -74,4 +78,5 @@ public class Post extends ParseObject {
     public void setRecording(ParseFile parseFile) {
         put(KEY_RECORDING, parseFile);
     }
+
 }
