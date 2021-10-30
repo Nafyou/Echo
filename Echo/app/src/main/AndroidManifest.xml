@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Echo">
+
         <activity
             android:name="com.example.echo.LoginActivity"
             android:exported="true">
