@@ -1,4 +1,4 @@
-package com.example.instagramclone.fragments;
+package com.example.echo.fragments;
 
 import android.os.Bundle;
 
