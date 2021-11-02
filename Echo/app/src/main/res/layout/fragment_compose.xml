@@ -7,55 +7,64 @@
 
 
     <EditText
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
         android:id="@+id/etLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Language " />
+        android:hint="Language "
+        android:inputType="text"
+        />
 
     <EditText
-        android:layout_below="@+id/etLanguage"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
         android:id="@+id/etWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Word/Phrase " />
-
-    <EditText
-        android:layout_below="@+id/etWord"
+        android:layout_below="@+id/etLanguage"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
+        android:hint="Word/Phrase "
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <EditText
         android:id="@+id/etTranslation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Translation" />
-
-    <EditText
-        android:layout_below="@+id/etTranslation"
+        android:layout_below="@+id/etWord"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
+        android:inputType="text"
+        android:hint="Translation"
+        android:minHeight="48dp" />
+
+    <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description"
-        android:inputType="textMultiLine" />
-
-    <EditText
-        android:layout_below="@+id/etDescription"
+        android:layout_below="@+id/etTranslation"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp" />
+
+    <EditText
         android:id="@+id/etCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/etDescription"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Category" />
+        android:hint="Category"
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <Button
         android:layout_below="@+id/etCategory"
