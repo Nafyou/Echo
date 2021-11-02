@@ -13,9 +13,10 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Language "
+        android:hint="@string/language"
+        android:importantForAutofill="no"
         android:inputType="text"
-        />
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/etWord"
@@ -25,9 +26,11 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:hint="Word/Phrase "
+        android:hint="@string/word_phrase"
+        android:importantForAutofill="no"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/etTranslation"
@@ -38,8 +41,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:inputType="text"
-        android:hint="Translation"
-        android:minHeight="48dp" />
+        android:hint="@string/translation"
+        android:minHeight="48dp"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/etDescription"
@@ -49,9 +53,10 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:hint="Description"
+        android:hint="@string/description"
         android:inputType="textMultiLine"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/etCategory"
@@ -62,9 +67,10 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Category"
+        android:hint="@string/category"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:importantForAutofill="no" />
 
     <Button
         android:layout_below="@+id/etCategory"
@@ -72,7 +78,7 @@
         android:id="@+id/btnCaptureAudio"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Record Audio" />
+        android:text="@string/record_audio" />
 
     <Button
         android:layout_below="@+id/btnCaptureAudio"
@@ -80,7 +86,7 @@
         android:id="@+id/btnSubmit"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Submit" />
+        android:text="@string/submit" />
 
     <VideoView
         android:layout_below="@+id/btnSubmit"
@@ -88,7 +94,7 @@
         android:id="@+id/evView"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Insert Video Here"
+        android:text="@string/insert_video_here"
          />
 
 
