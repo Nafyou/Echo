@@ -12,7 +12,7 @@ public class Post extends ParseObject {
     public static final String KEY_LANGUAGE = "language";
     public static final String KEY_RECORDING = "recording";
     public static final String KEY_TRANSLATION = "translation";
-    //public static final String KEY_USER = "username";
+    public static final String KEY_USER = "username";
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_PHRASE = "phrase";
     public static final String KEY_CATEGORY = "category";
@@ -24,14 +24,7 @@ public class Post extends ParseObject {
     public void setKeyLanguage(String language){
         put(KEY_LANGUAGE, language);
     }
-// Different TODO:Figure out parseFile syntax for getting recording.
-//    public String getKeyRecording(){
-//        return getString(KEY_RECORDING);
-//    }
-// Do something different( parse file)
-//    public void setKeyRecording(String recording){
-//        put(KEY_LANGUAGE, recording);
-//    }
+
 
     public String getKeyTranslation(){
         return getString(KEY_TRANSLATION);
@@ -45,8 +38,8 @@ public class Post extends ParseObject {
     public ParseUser getUser(){
        return getParseUser(KEY_USER);
     }
-    public void setKeyUser(String user){
-       put(KEY_LANGUAGE, user);
+    public void setKeyUser(ParseUser user){
+       put(KEY_USER, user);
     }
 
 

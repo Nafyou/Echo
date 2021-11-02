@@ -5,94 +5,83 @@
     android:layout_height="match_parent"
     tools:context="com.example.echo.fragments.ComposeFragment">
 
-    <EditText
-        android:id="@+id/etCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:ems="10"
-        android:hint="Category" />
 
     <EditText
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:id="@+id/etLanguage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Language " />
 
-
     <EditText
+        android:layout_below="@+id/etLanguage"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:id="@+id/etWord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etLanguage"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="2dp"
-        android:ems="10"
         android:hint="Word/Phrase " />
 
     <EditText
+        android:layout_below="@+id/etWord"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:id="@+id/etTranslation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etWord"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:ems="10"
         android:hint="Translation" />
 
     <EditText
+        android:layout_below="@+id/etTranslation"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
-        android:layout_height="102dp"
-        android:layout_below="@+id/etTranslation"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:ems="10"
-        android:gravity="start|top"
+        android:layout_height="wrap_content"
         android:hint="Description"
         android:inputType="textMultiLine" />
 
-    <Button
-        android:id="@+id/btnCaptureAudio"
+    <EditText
+        android:layout_below="@+id/etDescription"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/etCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="287dp"
+        android:ems="10"
+        android:hint="Category" />
+
+    <Button
+        android:layout_below="@+id/etCategory"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnCaptureAudio"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:text="Record Audio" />
 
-    <VideoView
-        android:id="@+id/evView"
-        android:layout_width="match_parent"
-        android:layout_height="201dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="193dp" />
-
     <Button
+        android:layout_below="@+id/btnCaptureAudio"
+        android:layout_marginTop="16dp"
         android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="125dp"
+        android:layout_width="match_parent"
         android:text="Submit" />
+
+    <VideoView
+        android:layout_below="@+id/btnSubmit"
+        android:layout_marginTop="16dp"
+        android:id="@+id/evView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Insert Video Here"
+         />
+
+
 
 </RelativeLayout>
