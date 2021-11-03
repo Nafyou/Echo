@@ -86,6 +86,7 @@ An app that allows users to record themselves saying phrases in their language, 
 <img src="https://i.imgur.com/c60KTXL.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+<img src="https://i.imgur.com/x7pytJK.png" width=600>
 
 ### [BONUS] Interactive Prototype
 
