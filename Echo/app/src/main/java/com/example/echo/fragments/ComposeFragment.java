@@ -20,10 +20,12 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.echo.MainActivity;
+import com.example.echo.LoginActivity;
 import com.example.echo.Post;
 import com.example.echo.R;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.File;
@@ -41,6 +43,7 @@ public class ComposeFragment extends Fragment {
     private VideoView evVideo;
     private Button btnSubmit;
     private String audioFileName = "audio.mp4";
+    private Button btnLogout;
 
     public ComposeFragment() {
         // Required empty public constructor
@@ -70,6 +73,7 @@ public class ComposeFragment extends Fragment {
         etDescription = view.findViewById(R.id.etDescription);
         etTranslation = view.findViewById(R.id.etTranslation);
         btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnLogout = view.findViewById(R.id.btnLogout);
 
         btnCaptureAudio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +92,17 @@ public class ComposeFragment extends Fragment {
                 String category = etCategory.getText().toString();
                 //Add video view/audio recording, and user object
                 savePost(language, word, description, translation, audioFile);
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "Attempting to logout");
+                ParseUser.logOut();
+                Intent i = new Intent(getContext(), LoginActivity.class);
+                startActivity(i);
+                Toast.makeText(getContext(), "Success!", Toast.LENGTH_SHORT).show();
             }
         });
     }

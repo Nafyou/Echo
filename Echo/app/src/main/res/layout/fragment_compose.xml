@@ -88,8 +88,16 @@
         android:layout_width="match_parent"
         android:text="@string/submit" />
 
-    <VideoView
+    <Button
         android:layout_below="@+id/btnSubmit"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnLogout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Logout" />
+
+    <VideoView
+        android:layout_below="@+id/btnLogout"
         android:layout_marginTop="16dp"
         android:id="@+id/evView"
         android:layout_height="wrap_content"
