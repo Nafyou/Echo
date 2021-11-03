@@ -20,6 +20,8 @@ import com.parse.SignUpCallback;
 //import com.example.echo.R;
 //import com.parse.Parse;
 
+//Upload logo on LoginActivity
+
 public class LoginActivity extends AppCompatActivity {
 
     public static final String TAG = "LoginActivity";
