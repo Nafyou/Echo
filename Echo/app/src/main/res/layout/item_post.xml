@@ -16,6 +16,13 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:text="user" />
 
+    <Button
+        android:id="@+id/btnStartAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plays Audio"
+        tools:text="Play Audio" />
+
     <VideoView
         android:id="@+id/evView"
         android:layout_width="match_parent"

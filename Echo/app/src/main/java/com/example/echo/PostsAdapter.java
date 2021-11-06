@@ -1,11 +1,13 @@
 package com.example.echo;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.ContentInfo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -70,7 +72,8 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView etLanguage;
         private TextView etTranslation;
         private TextView etCategory;
-
+        private MediaPlayer mediaPlayer;
+        private Button btnStartAudio;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvUsername);
@@ -79,6 +82,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             etTranslation = itemView.findViewById(R.id.etTranslation);
             etCategory = itemView.findViewById(R.id.etCategory);
             swipeContainer = itemView.findViewById(R.id.swipeContainer);
+            btnStartAudio = itemView.findViewById(R.id.btnStartAudio);
         }
 
         public void bind(Post post) {
@@ -87,10 +91,13 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             etTranslation.setText(post.getKeyTranslation());
             etLanguage.setText(post.getKeyLanguage());
             etCategory.setText(post.getKeyCategory());
+//            btnStartAudio.setOnClickListener(post.getRecording());
 
             //TODO: Fix everything after writing code for respective functions (getUsername() and audio files)
 //            tvUsername.setText(post.getKeyUser().getUsername());
+
 //            ParseFile image = post.getImage();
+              // mediaPlayer = new MediaPlayer()
 //            if (image != null) {
 //                Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
 //            }
