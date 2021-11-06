@@ -105,7 +105,7 @@ public class PostsFragment extends Fragment {
                     Log.i(TAG, "Post: " + post.getKeyDescription() + ", username: " + post.getUser().getUsername());
                 }
                 adapter.clear();
-                adapter.addAll(posts);
+                adapter.addAll(allPosts);
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
                 // Now we call setRefreshing(false) to signal refresh has finished
