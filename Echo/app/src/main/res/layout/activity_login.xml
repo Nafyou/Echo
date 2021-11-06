@@ -2,35 +2,38 @@
 <RelativeLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:accessibilityLiveRegion="none"
+    android:background="#E4FFC107"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
 
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="373dp"
+        android:layout_width="289dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="256dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="389dp"
         android:layout_weight="1"
         android:ems="10"
         android:hint="username" />
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="371dp"
+        android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="462dp"
         android:layout_weight="1"
         android:ems="10"
         android:hint="password"
@@ -43,11 +46,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="451dp"
-        android:layout_marginEnd="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="541dp"
+        android:layout_marginEnd="19dp"
         android:layout_weight="1"
-        android:text="Login" />
+        android:backgroundTint="#FFFFFF"
+        android:text="Login"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/btnSignUp"
@@ -57,11 +63,39 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="516dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="615dp"
+        android:layout_marginEnd="19dp"
         android:layout_weight="1"
-        android:text="Sign Up" />
+        android:backgroundTint="#FFFFFF"
+        android:text="Sign Up"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="228dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="64dp"
+        app:srcCompat="@drawable/echossketch" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="314dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Echos"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
