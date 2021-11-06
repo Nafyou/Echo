@@ -28,26 +28,26 @@ An app that allows users to record themselves saying phrases in their language, 
 
 **Required Must-have Stories**
 
-* Login/Registration Page
-* Feed using RecyclerView
-    * Users can view posts
+[x] Login/Registration Page
+[ ] Feed using RecyclerView
+    [ ] Users can view posts
 
-* Compose
-    * User can compose a post
-    * Each post has an audio clip (30sec max), translation, language, cave (category/topic), and user name
-    * User can delete their own post
-* Bottom Navigation
-    * Contains home feed, personal feed, composition, and saved posts
+[x] Compose
+    [ ] User can compose a post
+    [x] Each post has an audio clip (30sec max), translation, language, cave (category/topic), and user name
+    [ ] User can delete their own post
+[x] Bottom Navigation
+    [x] Contains home feed, personal feed, composition, and saved posts
 
 **Optional Nice-to-have Stories**
 
-* Users can save posts
-* Users can click on a post to view more detail
-* Users can follow other users
-* Users can comment on posts
-* If translation is too long, add 'Read More' to view the whole translation
-* Users can search for different users/caves/languages
-* Optional Flashcards 
+[ ] Users can save posts
+[ ] Users can click on a post to view more detail
+[ ] Users can follow other users
+[ ] Users can comment on posts
+[ ] If translation is too long, add 'Read More' to view the whole translation
+[ ] Users can search for different users/caves/languages
+[ ] Optional Flashcards 
 
 ### 2. Screen Archetypes
 
