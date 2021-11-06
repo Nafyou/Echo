@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.echo.Post;
 //import com.example.echo.PostsAdapter;
+import com.example.echo.PostsAdapter;
 import com.example.echo.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -31,16 +32,14 @@ public class PostsFragment extends Fragment {
 
     public static final String TAG = "PostsFragment";
     private RecyclerView rvPosts;
-    //protected PostsAdapter adapter;
-    //protected List<Post> allPosts;
+    protected PostsAdapter adapter;
+    protected List<Post> allPosts;
     SwipeRefreshLayout swipeContainer;
 
     public PostsFragment() {
         // Required empty public constructor
     }
 
-    /* TODO: Make PostsAdapter then uncomment
-    // Clean all elements of the recycler
     public void clear() {
         allPosts.clear();
         adapter.notifyDataSetChanged();
@@ -51,7 +50,7 @@ public class PostsFragment extends Fragment {
         allPosts.addAll(postsList);
         adapter.notifyDataSetChanged();
     }
-     */
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,28 +67,28 @@ public class PostsFragment extends Fragment {
             @Override
             public void onRefresh() {
                 Log.i(TAG, "fetching new data");
-                //queryPosts();
+                queryPosts();
             }
         });
 
         rvPosts = view.findViewById(R.id.rvPosts);
 
         // TODO: Uncomment after adding PostsAdapter
-        //allPosts = new ArrayList<>();
-        //adapter = new PostsAdapter(getContext(), allPosts);
+        allPosts = new ArrayList<>();
+        adapter = new PostsAdapter(getContext(), allPosts);
 
         // Steps to use the recycler view:
         // 0. create layout for one row in the list
         // 1. create the adapter
         // 2. create the data source
         // 3. set the adapter on the recycler view
-        //rvPosts.setAdapter(adapter);
+        rvPosts.setAdapter(adapter);
         // 4. set the layout manager on the recycle view
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
-        //queryPosts();
+        queryPosts();
     }
 
-    /* TODO: Uncomment and edit after cleaning up Posts and making PostsAdapter
+    // TODO: Uncomment and edit after cleaning up Posts and making PostsAdapter
     protected void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
@@ -103,11 +102,11 @@ public class PostsFragment extends Fragment {
                     return;
                 }
                 for (Post post : posts) {
-                    Log.i(TAG, "Post: " + post.getDescription() + ", username: " + post.getUser().getUsername());
+                    Log.i(TAG, "Post: " + post.getKeyDescription() + ", username: " + post.getUser().getUsername());
                 }
                 adapter.clear();
                 adapter.addAll(posts);
-                //allPosts.addAll(posts);
+                allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
                 // Now we call setRefreshing(false) to signal refresh has finished
                 swipeContainer.setRefreshing(false);
@@ -115,5 +114,5 @@ public class PostsFragment extends Fragment {
         });
     }
 
-     */
+
 }

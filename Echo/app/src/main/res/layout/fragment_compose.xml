@@ -1,8 +1,8 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0DA18"
     tools:context="com.example.echo.fragments.ComposeFragment">
 
 
@@ -40,10 +40,10 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:inputType="text"
         android:hint="@string/translation"
-        android:minHeight="48dp"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etDescription"
@@ -54,9 +54,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:hint="@string/description"
+        android:importantForAutofill="no"
         android:inputType="textMultiLine"
-        android:minHeight="48dp"
-        android:importantForAutofill="no" />
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etCategory"
@@ -68,35 +68,33 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:hint="@string/category"
+        android:importantForAutofill="no"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:importantForAutofill="no" />
+        android:minHeight="48dp" />
 
     <Button
+        android:id="@+id/btnCaptureAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/etCategory"
         android:layout_marginTop="16dp"
-        android:id="@+id/btnCaptureAudio"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:text="@string/record_audio" />
 
     <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/btnCaptureAudio"
         android:layout_marginTop="16dp"
-        android:id="@+id/btnSubmit"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:text="@string/submit" />
 
     <VideoView
+        android:id="@+id/evView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/btnSubmit"
         android:layout_marginTop="16dp"
-        android:id="@+id/evView"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="@string/insert_video_here"
-         />
-
+        android:text="@string/insert_video_here" />
 
 
 </RelativeLayout>

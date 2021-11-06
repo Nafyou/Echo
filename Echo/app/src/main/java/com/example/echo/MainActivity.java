@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.echo.R;
 import com.example.echo.fragments.ComposeFragment;
+import com.example.echo.fragments.PostsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_feed:
                         Toast.makeText(MainActivity.this, "Feed", Toast.LENGTH_SHORT).show();
-                        fragment = new ComposeFragment();
+                        fragment = new PostsFragment();
                         break;
                     case R.id.action_saved:
                     default:
