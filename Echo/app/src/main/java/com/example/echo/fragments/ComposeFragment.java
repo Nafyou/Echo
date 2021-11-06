@@ -2,15 +2,21 @@ package com.example.echo.fragments;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import java.io.*;
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -75,10 +81,15 @@ public class ComposeFragment extends Fragment {
         etTranslation = view.findViewById(R.id.etTranslation);
         btnSubmit = view.findViewById(R.id.btnSubmit);
 
+        //TODO: Figure out how to navigate to another fragment
         btnCaptureAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchFileExplorer();
+//                FragmentTransaction fr = getFragmentManager().beginTransaction();
+//                fr.replace(R.id.container,new RecordFragment());
+//                fr.commit();
+
+                //openRecordFragment();
             }
         });
 
@@ -96,17 +107,39 @@ public class ComposeFragment extends Fragment {
         });
     }
 
+    //TODO: change to fragment_record screen to record audio
     private void launchFileExplorer() {
+        Intent i = new Intent(getContext(), RecordFragment.class);
+        startActivityForResult(i, 1);
+
         // create Intent to take a picture and return control to the calling application
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("audio/*");
-        audioFile = getAudioFileUri(audioFileName);
+//        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//        intent.setType("audio/*");
+//        audioFile = getAudioFileUri(audioFileName);
+//
+//        Uri fileProvider = FileProvider.getUriForFile(getContext(), "com.echo.fileprovider", audioFile);
+//        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
+//
+//
+//        startActivityForResult(intent, 1);
+    }
 
-        Uri fileProvider = FileProvider.getUriForFile(getContext(), "com.echo.fileprovider", audioFile);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider);
+    // Create launcher variable inside onAttach or onCreate or global
+    ActivityResultLauncher<Intent> launchAudioCapture = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        // your operation....
+                    }
+                }
+            });
 
-
-        startActivityForResult(intent, 1);
+    public void openRecordFragment() {
+        Intent intent = new Intent(getContext(), RecordFragment.class);
+        launchAudioCapture.launch(intent);
     }
 
 
