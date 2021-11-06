@@ -29,8 +29,8 @@ An app that allows users to record themselves saying phrases in their language, 
 **Required Must-have Stories**
 
 - [x] Login/Registration Page
-- [ ] Feed using RecyclerView
-    - [ ] Users can view posts
+- [x] Feed using RecyclerView
+    - [x] Users can view posts
 
 - [x] Compose
     - [ ] User can compose a post
