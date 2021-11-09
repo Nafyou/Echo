@@ -16,6 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentResultListener;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Environment;
@@ -59,6 +61,14 @@ public class ComposeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+                // We use a String here, but any type that can be put in a Bundle is supported
+                String result = bundle.getString("bundleKey");
+                // Do something with the result
+            }
+        });
     }
 
     @Override
@@ -85,9 +95,16 @@ public class ComposeFragment extends Fragment {
         btnCaptureAudio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FragmentTransaction fr = getFragmentManager().beginTransaction();
-//                fr.replace(R.id.container,new RecordFragment());
-//                fr.commit();
+//                Fragment fragment = new RecordFragment();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.flContainer, fragment);
+//                //fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
+
+                FragmentTransaction fr = getFragmentManager().beginTransaction();
+                fr.replace(R.id.flContainer,new RecordFragment());
+                fr.commit();
 
                 //openRecordFragment();
             }

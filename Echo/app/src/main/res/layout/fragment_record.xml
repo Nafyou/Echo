@@ -15,6 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="98dp"
         android:layout_marginTop="63dp"
+        android:layout_above="@+id/btnStartRecord"
         android:src="@drawable/echossketchnbg" />
 
     <Button
