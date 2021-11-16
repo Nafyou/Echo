@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         // Set default fragment selection
     }
 
-
+    /**
     private void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.findInBackground(new FindCallback<Post>() {
@@ -96,5 +96,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    }**/
 }
