@@ -33,7 +33,7 @@ An app that allows users to record themselves saying phrases in their language, 
     - [x] Users can view posts
 
 - [x] Compose
-    - [ ] User can compose a post
+    - [X] User can compose a post
     - [x] Each post has an audio clip (30sec max), translation, language, cave (category/topic), and user name
     - [ ] User can delete their own post
 - [x] Bottom Navigation
