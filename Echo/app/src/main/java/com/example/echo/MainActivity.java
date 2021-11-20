@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-        // Set default fragment selection
+        // TODO: Set default fragment selection
     }
 
 

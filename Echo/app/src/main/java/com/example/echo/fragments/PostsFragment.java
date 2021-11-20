@@ -106,7 +106,7 @@ public class PostsFragment extends Fragment {
                 }
                 adapter.clear();
                 adapter.addAll(posts);
-//                allPosts.addAll(posts);
+                //allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
                 // Now we call setRefreshing(false) to signal refresh has finished
                 swipeContainer.setRefreshing(false);

@@ -94,7 +94,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 //            btnStartAudio.setOnClickListener(post.getRecording());
 
             //TODO: Fix everything after writing code for respective functions (getUsername() and audio files)
-//            tvUsername.setText(post.getKeyUser().getUsername());
+            tvUsername.setText(post.getUser().getUsername());
 
 //            ParseFile image = post.getImage();
               // mediaPlayer = new MediaPlayer()
