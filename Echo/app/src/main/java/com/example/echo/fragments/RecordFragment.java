@@ -89,6 +89,7 @@ public class RecordFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();        //create fragment manager
                 fragmentManager.popBackStack();              //go back to compose fragment
+                Toast.makeText(getContext(), "Audio file saved in Downloads", Toast.LENGTH_LONG).show();
             }
         });
 
