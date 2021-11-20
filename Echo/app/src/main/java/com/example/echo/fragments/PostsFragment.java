@@ -96,7 +96,7 @@ public class PostsFragment extends Fragment {
         query.addDescendingOrder(Post.KEY_CREATEDAT);
         query.findInBackground(new FindCallback<Post>() {
             @Override
-            public void done(List<Post> posts, ParseException e) {
+            public void done(List<Post> posts, ParseException e) {  
                 if (e != null) {
                     Log.e(TAG, "Issue with getting posts");
                     return;
