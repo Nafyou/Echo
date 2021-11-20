@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:background="#FFC107"
     android:orientation="vertical">
 
     <TextView
@@ -14,6 +15,13 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:text="user" />
+
+    <Button
+        android:id="@+id/btnStartAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Plays Audio"
+        tools:text="Play Audio" />
 
     <VideoView
         android:id="@+id/evView"

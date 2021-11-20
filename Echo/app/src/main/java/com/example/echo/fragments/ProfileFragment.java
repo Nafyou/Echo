@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.echo.Post;
 //import com.example.echo.PostsAdapter;
@@ -21,6 +22,7 @@ import com.example.echo.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,15 +30,16 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PostsFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
-    public static final String TAG = "PostsFragment";
+    public static final String TAG = "ProfileFragment";
     private RecyclerView rvPosts;
     protected PostsAdapter adapter;
     protected List<Post> allPosts;
+    private TextView username;
     SwipeRefreshLayout swipeContainer;
 
-    public PostsFragment() {
+    public ProfileFragment() {
         // Required empty public constructor
     }
 
@@ -56,7 +59,7 @@ public class PostsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_posts, container, false);
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
     @Override
@@ -71,28 +74,26 @@ public class PostsFragment extends Fragment {
             }
         });
 
-        rvPosts = view.findViewById(R.id.rvPosts);
+        username = view.findViewById(R.id.tvPfpUsername);
+        username.setText(ParseUser.getCurrentUser().getUsername());
+        rvPosts = view.findViewById(R.id.rvPostsProfile);
 
         // TODO: Uncomment after adding PostsAdapter
         allPosts = new ArrayList<>();
         adapter = new PostsAdapter(getContext(), allPosts);
 
-        // Steps to use the recycler view:
-        // 0. create layout for one row in the list
-        // 1. create the adapter
-        // 2. create the data source
-        // 3. set the adapter on the recycler view
+
         rvPosts.setAdapter(adapter);
-        // 4. set the layout manager on the recycle view
+
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPosts();
     }
-
 
     // TODO: Uncomment and edit after cleaning up Posts and making PostsAdapter
     protected void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
+        query.whereEqualTo(Post.KEY_USER, ParseUser.getCurrentUser());
         query.setLimit(20);
         query.addDescendingOrder(Post.KEY_CREATEDAT);
         query.findInBackground(new FindCallback<Post>() {

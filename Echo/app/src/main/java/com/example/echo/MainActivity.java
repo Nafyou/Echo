@@ -15,6 +15,8 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.echo.R;
 import com.example.echo.fragments.ComposeFragment;
+import com.example.echo.fragments.PostsFragment;
+import com.example.echo.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -49,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
         final FragmentManager fragmentManager = getSupportFragmentManager();
         bottomNavigationView = findViewById(R.id.bottomNavigation);
-        //queryPosts();
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -63,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.action_profile:
                         Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
-                        fragment = new ComposeFragment();
+                        fragment = new ProfileFragment();
                         break;
                     case R.id.action_feed:
                         Toast.makeText(MainActivity.this, "Feed", Toast.LENGTH_SHORT).show();
-                        fragment = new ComposeFragment();
+                        fragment = new PostsFragment();
                         break;
                     case R.id.action_saved:
                     default:
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         // Set default fragment selection
     }
 
-
+    /**
     private void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.findInBackground(new FindCallback<Post>() {
@@ -96,5 +97,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    }**/
 }

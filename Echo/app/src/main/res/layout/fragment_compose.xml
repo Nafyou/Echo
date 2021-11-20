@@ -1,9 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sunglow"
+
     tools:context="com.example.echo.fragments.ComposeFragment">
 
     <EditText
@@ -79,6 +81,7 @@
 
     <Button
         android:id="@+id/btnCaptureAudio"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etCategory"
@@ -94,6 +97,12 @@
         app:iconTint="@color/inkblack"
         app:strokeColor="@color/inkblack"
         app:strokeWidth="15dp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCategory"
+        android:layout_marginTop="16dp"
+        android:text="@string/record_audio" />
+
 
     <Button
         android:id="@+id/btnSubmit"
@@ -101,8 +110,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnCaptureAudio"
         android:layout_marginTop="16dp"
+
         android:theme="@drawable/btn_style"
         android:background="@color/white"
+
+
         android:text="@string/submit" />
 
     <VideoView

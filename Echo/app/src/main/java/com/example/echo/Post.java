@@ -12,6 +12,7 @@ public class Post extends ParseObject {
     public static final String KEY_LANGUAGE = "language";
     public static final String KEY_RECORDING = "recording";
     public static final String KEY_TRANSLATION = "translation";
+    //add transliteration
     public static final String KEY_USER = "username";
     public static final String KEY_DESCRIPTION = "description";
     public static final String KEY_PHRASE = "phrase";
