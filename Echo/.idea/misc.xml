@@ -3,7 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2171875" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_style.xml" value="0.2171875" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style.xml" value="0.2703125" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2171875" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2171875" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/softrectangle.xml" value="0.2171875" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.4" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.24769230769230768" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.33" />
@@ -15,10 +26,12 @@
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.24769230769230768" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/xml/fileprovider.xml" value="0.1796875" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_login.xml" value="0.1375" />
+
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.25" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.1" />
+
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.25" />
+
       </map>
     </option>
   </component>
