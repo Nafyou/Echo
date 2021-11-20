@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PostsFragment">
+    tools:context=".fragments.ProfileFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeContainer"
-        android:layout_width="411dp"
-        android:layout_height="563dp"
+        android:layout_width="match_parent"
+        android:layout_height="575dp"
+        android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="22dp"
         android:layout_marginBottom="0dp"
         android:background="#FFC107">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvPosts2"
+            android:id="@+id/rvPostsProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/ic_baseline_person_24"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvPfpUsername"
+        android:layout_width="187dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:text="TextView"
+        tools:text="Username" />
+
+    <TextView
+        android:id="@+id/tvPfpTransl"
+        android:layout_width="121dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvPfpUsername"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="111dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:text="Total Translations: " />
 
 </RelativeLayout>
