@@ -8,14 +8,16 @@
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.24769230769230768" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.33" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.24769230769230768" />
+        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
+        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_profile2.xml" value="0.32708333333333334" />
+        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_record.xml" value="0.32708333333333334" />
+        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.32708333333333334" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.24769230769230768" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/xml/fileprovider.xml" value="0.1796875" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_login.xml" value="0.1375" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_record.xml" value="0.2828125" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.25" />
-        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.25" />
-        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_record.xml" value="0.2828125" />
+        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.1" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.25" />
       </map>
     </option>
