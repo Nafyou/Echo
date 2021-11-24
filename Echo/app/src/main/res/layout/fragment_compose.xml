@@ -100,7 +100,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etCategory"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:text="Select audio file" />
+
+    <Button
+        android:id="@+id/btnRecordAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnCaptureAudio"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="0dp"
         android:text="@string/record_audio" />
 
 
@@ -108,12 +121,10 @@
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCaptureAudio"
-        android:layout_marginTop="16dp"
 
-        android:theme="@drawable/btn_style"
-        android:background="@color/white"
-
+        android:layout_below="@+id/btnRecordAudio"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="4dp"
 
         android:text="@string/submit" />
 
@@ -122,8 +133,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSubmit"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/btn_style"
+
+        android:layout_marginTop="8dp"
+
         android:text="@string/insert_video_here" />
 
 

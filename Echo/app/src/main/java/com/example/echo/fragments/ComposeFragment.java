@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -42,6 +44,7 @@ public class ComposeFragment extends Fragment {
     private EditText etCategory;
     private File audioFile;
     private Button btnCaptureAudio;
+    private Button btnRecordAudio;
     private VideoView evVideo;
     private Button btnSubmit;
     private String audioFileName = "audio.mp4";
@@ -74,6 +77,20 @@ public class ComposeFragment extends Fragment {
         etDescription = view.findViewById(R.id.etDescription);
         etTranslation = view.findViewById(R.id.etTranslation);
         btnSubmit = view.findViewById(R.id.btnSubmit);
+        btnRecordAudio = view.findViewById(R.id.btnRecordAudio);
+
+        btnRecordAudio.setOnClickListener(new View.OnClickListener() {  //Function for whenever we click the Record Audio button
+            @Override
+            public void onClick(View view) {
+                Fragment recordFragment = new RecordFragment(); //Create the record fragment
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); //create the fragment transaction.
+
+                fragmentTransaction.replace(R.id.flContainer, recordFragment);    // Replace the (fragment) container with record fragment view
+                fragmentTransaction.addToBackStack(null);       //Allows us to go back to compose view from record fragment
+                fragmentTransaction.commit();                   //start the transaction
+            }
+        });
 
         btnCaptureAudio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +111,7 @@ public class ComposeFragment extends Fragment {
                 savePost(language, word, description, translation, category);
             }
         });
+
     }
 
     private void launchFileExplorer() {
