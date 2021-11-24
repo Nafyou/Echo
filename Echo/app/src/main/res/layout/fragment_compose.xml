@@ -1,10 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0DA18"
-    tools:context="com.example.echo.fragments.ComposeFragment">
+    android:background="@color/sunglow"
 
+    tools:context="com.example.echo.fragments.ComposeFragment">
 
     <EditText
         android:id="@+id/etLanguage"
@@ -12,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/et_style"
         android:ems="10"
         android:hint="@string/language"
         android:importantForAutofill="no"
@@ -26,6 +29,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/et_style"
         android:hint="@string/word_phrase"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -40,6 +44,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/et_style"
         android:hint="@string/translation"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -53,6 +58,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/et_style"
         android:hint="@string/description"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
@@ -66,6 +72,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/et_style"
         android:ems="10"
         android:hint="@string/category"
         android:importantForAutofill="no"
@@ -74,6 +81,22 @@
 
     <Button
         android:id="@+id/btnCaptureAudio"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCategory"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="src_over"
+        android:insetLeft="14dp"
+        app:cornerRadius="2dp"
+        app:icon="@android:drawable/ic_media_play"
+        app:iconPadding="8dp"
+        app:iconTint="@color/inkblack"
+        app:strokeColor="@color/inkblack"
+        app:strokeWidth="15dp" />
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etCategory"
@@ -93,13 +116,16 @@
         android:layout_marginEnd="0dp"
         android:text="@string/record_audio" />
 
+
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_below="@+id/btnRecordAudio"
         android:layout_alignParentStart="true"
         android:layout_marginTop="4dp"
+
         android:text="@string/submit" />
 
     <VideoView
@@ -107,7 +133,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSubmit"
+
         android:layout_marginTop="8dp"
+
         android:text="@string/insert_video_here" />
 
 
