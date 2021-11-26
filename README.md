@@ -29,11 +29,13 @@ An app that allows users to record themselves saying phrases in their language, 
 **Required Must-have Stories**
 
 - [x] Login/Registration Page
+    - [ ] Users can log out
 - [x] Feed using RecyclerView
     - [x] Users can view posts
 
 - [x] Compose
     - [X] User can compose a post
+    - [X] User can record audio inside app
     - [x] Each post has an audio clip (30sec max), translation, language, cave (category/topic), and user name
     - [ ] User can delete their own post
 - [x] Bottom Navigation
