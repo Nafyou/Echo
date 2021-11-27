@@ -17,6 +17,7 @@ import com.example.echo.R;
 import com.example.echo.fragments.ComposeFragment;
 import com.example.echo.fragments.PostsFragment;
 import com.example.echo.fragments.ProfileFragment;
+import com.example.echo.fragments.SavedFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 // Need to edit the fragment part of the action_profile, feed and saved to match their fragments
                 switch (menuItem.getItemId()) {
                     case R.id.action_compose:
-                        Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Compose", Toast.LENGTH_SHORT).show();
                         fragment = new ComposeFragment();
                         break;
                     case R.id.action_profile:
@@ -71,8 +72,11 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new PostsFragment();
                         break;
                     case R.id.action_saved:
+                        Toast.makeText(MainActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                        fragment = new SavedFragment();
+                        break;
                     default:
-                        fragment = new ComposeFragment();
+                        fragment = new ProfileFragment();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();

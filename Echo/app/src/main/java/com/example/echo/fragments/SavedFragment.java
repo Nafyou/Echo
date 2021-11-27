@@ -2,14 +2,6 @@ package com.example.echo.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,33 +10,36 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.example.echo.LoginActivity;
 import com.example.echo.Post;
-//import com.example.echo.PostsAdapter;
 import com.example.echo.PostsAdapter;
 import com.example.echo.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.ParseRelation;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class ProfileFragment extends Fragment {
+public class SavedFragment extends Fragment {
 
-    public static final String TAG = "ProfileFragment";
+    public static final String TAG = "SavedFragment";
     private RecyclerView rvPosts;
     protected PostsAdapter adapter;
     protected List<Post> allPosts;
-    private TextView username;
-    private Button btnLogout;
+    private TextView tvSavedTitle;
     SwipeRefreshLayout swipeContainer;
 
-    public ProfileFragment() {
+    public SavedFragment() {
         // Required empty public constructor
     }
 
@@ -64,7 +59,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_saved, container, false);
     }
 
     @Override
@@ -79,26 +74,11 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        username = view.findViewById(R.id.tvTitle);
-        username.setText(ParseUser.getCurrentUser().getUsername());
-        rvPosts = view.findViewById(R.id.rvPostsProfile);
-        btnLogout = view.findViewById(R.id.btnLogout);
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i(TAG, "Attempting to logout");
-                ParseUser.logOut();
-                Intent i = new Intent(getContext(), LoginActivity.class);
-                startActivity(i);
-                Toast.makeText(getContext(), "Success!", Toast.LENGTH_SHORT).show();
-            }
-        });
+        tvSavedTitle = view.findViewById(R.id.tvSavedTitle);
 
         // TODO: Uncomment after adding PostsAdapter
         allPosts = new ArrayList<>();
         adapter = new PostsAdapter(getContext(), allPosts);
-
 
         rvPosts.setAdapter(adapter);
 
@@ -106,13 +86,15 @@ public class ProfileFragment extends Fragment {
         queryPosts();
     }
 
-    // TODO: Uncomment and edit after cleaning up Posts and making PostsAdapter
+    // TODO: Create a RecyclerView that will only have posts that have been saved by the user
     protected void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
-        query.whereEqualTo(Post.KEY_USER, ParseUser.getCurrentUser());
+        // only includes posts that have their object ids in the current user's SavedPosts list
+        query.whereEqualTo(Post.KEY_OBJECT_ID, ParseUser.getCurrentUser().getRelation("savedPosts").toString());
+        //query.whereEqualTo(ParseUser.getCurrentUser(), Post.KEY_OBJECT_ID);
         query.setLimit(20);
-        query.addDescendingOrder(Post.KEY_CREATEDAT);
+        //query.addDescendingOrder(Post.KEY_CREATEDAT);
         query.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {
@@ -131,6 +113,5 @@ public class ProfileFragment extends Fragment {
             }
         });
     }
-
-
 }
+

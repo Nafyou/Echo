@@ -29,8 +29,11 @@
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.1" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.23229166666666667" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_record.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_saved.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.25" />
       </map>
     </option>
   </component>
