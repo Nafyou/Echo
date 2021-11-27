@@ -1,5 +1,6 @@
 package com.example.echo.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,8 +14,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.echo.LoginActivity;
 import com.example.echo.Post;
 //import com.example.echo.PostsAdapter;
 import com.example.echo.PostsAdapter;
@@ -37,6 +41,7 @@ public class ProfileFragment extends Fragment {
     protected PostsAdapter adapter;
     protected List<Post> allPosts;
     private TextView username;
+    private Button btnLogout;
     SwipeRefreshLayout swipeContainer;
 
     public ProfileFragment() {
@@ -77,6 +82,18 @@ public class ProfileFragment extends Fragment {
         username = view.findViewById(R.id.tvPfpUsername);
         username.setText(ParseUser.getCurrentUser().getUsername());
         rvPosts = view.findViewById(R.id.rvPostsProfile);
+        btnLogout = view.findViewById(R.id.btnLogout);
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(TAG, "Attempting to logout");
+                ParseUser.logOut();
+                Intent i = new Intent(getContext(), LoginActivity.class);
+                startActivity(i);
+                Toast.makeText(getContext(), "Success!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         // TODO: Uncomment after adding PostsAdapter
         allPosts = new ArrayList<>();
