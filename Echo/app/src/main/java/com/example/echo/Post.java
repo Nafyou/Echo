@@ -34,6 +34,7 @@ public class Post extends ParseObject {
 //        put(KEY_LANGUAGE, recording);
 //    }
 
+
     public String getKeyTranslation(){
         return getString(KEY_TRANSLATION);
     }
