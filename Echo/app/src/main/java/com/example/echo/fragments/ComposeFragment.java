@@ -3,6 +3,9 @@ package com.example.echo.fragments;
 import static android.app.Activity.RESULT_OK;
 
 import android.content.Intent;
+import android.media.Image;
+import android.media.MediaMetadataRetriever;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import java.io.*;
 import android.os.Bundle;
@@ -15,6 +18,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Environment;
+import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,6 +26,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -36,6 +42,7 @@ import java.io.File;
 
 public class ComposeFragment extends Fragment {
 
+    MediaPlayer mediaPlayer;        //necessary to play audio
     public static final String TAG = "ComposeFragment";
     private EditText etLanguage;
     private EditText etWord;
@@ -47,7 +54,13 @@ public class ComposeFragment extends Fragment {
     private Button btnRecordAudio;
     private VideoView evVideo;
     private Button btnSubmit;
+    private ImageView imagePlay;
+    private ProgressBar progressBar;
+    private EditText tvTimeCounter;
+
     private String audioFileName = "audio.mp4";
+    private int currProgress;
+    private int totalTime;
 
     public ComposeFragment() {
         // Required empty public constructor
@@ -78,6 +91,11 @@ public class ComposeFragment extends Fragment {
         etTranslation = view.findViewById(R.id.etTranslation);
         btnSubmit = view.findViewById(R.id.btnSubmit);
         btnRecordAudio = view.findViewById(R.id.btnRecordAudio);
+        imagePlay = view.findViewById(R.id.imagePlay);
+        progressBar = view.findViewById(R.id.progressBar);
+        tvTimeCounter = view.findViewById(R.id.tvTimeCounter);
+        tvTimeCounter.setVisibility(View.INVISIBLE);
+
 
         btnRecordAudio.setOnClickListener(new View.OnClickListener() {  //Function for whenever we click the Record Audio button
             @Override
@@ -108,10 +126,55 @@ public class ComposeFragment extends Fragment {
                 String translation = etTranslation.getText().toString();
                 String category = etCategory.getText().toString();
                 //Add video view/audio recording, and user object
-                savePost(language, word, description, translation, category);
+                savePost(language, word, description, translation, category, audioFile);
             }
         });
 
+        imagePlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (audioFile != null) {
+                    play(view);
+                }
+            }
+        });
+
+    }
+
+    private void play(View view) {
+        try {
+            currProgress = 0;
+            progressBar.setProgress(0);
+            progressBar.setMax(totalTime);
+
+            final Thread t = new Thread() {
+                @Override
+                public void run() {
+                    while (currProgress < totalTime) {
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (currProgress % 1000 < 50) {
+                                    tvTimeCounter.setText(currProgress / 1000 + "/" + totalTime / 1000);
+                                }
+                            }
+                        });
+                        SystemClock.sleep(10);
+                        currProgress += 10;
+                        progressBar.setProgress(currProgress);
+                    }
+                }
+            };
+
+            mediaPlayer = new MediaPlayer();       //create the MediaPlayer object
+            mediaPlayer.setDataSource(audioFile.getPath());
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+
+            t.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void launchFileExplorer() {
@@ -151,7 +214,15 @@ public class ComposeFragment extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                tvTimeCounter.setVisibility(View.VISIBLE);
+                Uri uri = Uri.parse(audioFile.getPath());
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                mmr.setDataSource(getContext(),uri);
+                String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+                int millSecond = Integer.parseInt(durationStr);
 
+                totalTime = millSecond;
+                tvTimeCounter.setText(Integer.toString(0) + "/" + Integer.toString(totalTime/1000));
 
 
                 /**String pathFromUri = audioFileUri.getPath();
@@ -187,7 +258,7 @@ public class ComposeFragment extends Fragment {
     }
 
 
-    private void savePost(String language, String word, String description, String translation, String category) {
+    private void savePost(String language, String word, String description, String translation, String category, File audioFile) {
         Post post = new Post();
         post.setKeyLanguage(language);
         post.setKeyPhrase(word);
@@ -195,7 +266,6 @@ public class ComposeFragment extends Fragment {
         post.setKeyTranslation(translation);
         post.setKeyCategory(category);
         post.setRecording(new ParseFile(audioFile));
-        //post.setRecording();
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
