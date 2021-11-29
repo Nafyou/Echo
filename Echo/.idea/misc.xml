@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_circle_style.xml" value="0.2911458333333333" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_circle_style_color.xml" value="0.2911458333333333" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_style.xml" value="0.2911458333333333" />
@@ -10,6 +11,8 @@
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style.xml" value="0.2911458333333333" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style_color.xml" value="0.2911458333333333" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style_dropshadow.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2328125" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/round_rect_shape.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.264" />

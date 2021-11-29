@@ -1,194 +1,344 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sunglow"
-
+    android:background="#F0DA18"
+    android:textAlignment="center"
+    android:textDirection="firstStrongRtl"
     tools:context="com.example.echo.fragments.ComposeFragment">
 
-    <!-- android:background="@drawable/et_style" -->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="383dp"
+        android:layout_height="570dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FBEE6E"
+        android:foregroundTint="#FBEE6E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="360dp"
+        android:layout_height="39dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="multiply"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintBottom_toTopOf="@+id/etWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etLanguage" />
+
     <EditText
         android:id="@+id/etLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="362dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/baloo"
         android:hint="@string/language"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:minHeight="48dp"
+        android:shadowColor="#000000"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintBottom_toTopOf="@+id/etWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
-    <!-- android:background="@drawable/et_style" -->
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="364dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="multiply"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintBottom_toTopOf="@+id/etTranslation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etWord" />
+
     <EditText
         android:id="@+id/etWord"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etLanguage"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
         android:hint="@string/word_phrase"
         android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
+        android:shadowColor="#000000"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintBottom_toTopOf="@+id/etTranslation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLanguage"
         tools:ignore="TextContrastCheck" />
 
-    <!-- android:background="@drawable/et_style" -->
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="362dp"
+        android:layout_height="38dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="multiply"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintBottom_toTopOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etTranslation" />
+
     <EditText
         android:id="@+id/etTranslation"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etWord"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
         android:hint="@string/translation"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:shadowColor="#000000"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintBottom_toTopOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWord" />
 
-    <!-- android:background="@drawable/et_style" -->
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="359dp"
+        android:layout_height="39dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="multiply"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintBottom_toTopOf="@+id/etCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etDescription" />
+
     <EditText
         android:id="@+id/etDescription"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etTranslation"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
         android:hint="@string/description"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:shadowColor="#000000"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintBottom_toTopOf="@+id/etCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTranslation" />
 
-    <!-- android:background="@drawable/et_style" -->
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="361dp"
+        android:layout_height="43dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="multiply"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCaptureAudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etCategory"
+        app:layout_constraintVertical_bias="0.08" />
+
     <EditText
         android:id="@+id/etCategory"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/baloo"
         android:hint="@string/category"
         android:importantForAutofill="no"
         android:inputType="text"
-        android:minHeight="48dp" />
-
-    <!-- android:background="@drawable/et_style" -->
-    <!--<Button
-        android:id="@+id/btnCaptureAudio"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCategory"
-        android:layout_marginLeft="155dp"
-        android:layout_marginTop="13dp"
-        android:backgroundTint="@color/white"
-        android:backgroundTintMode="src_over"
-        android:insetLeft="14dp"
-        app:cornerRadius="2dp"
-        app:icon="@android:drawable/ic_media_play"
-        app:iconPadding="8dp"
-        app:iconTint="@color/inkblack"
-        app:strokeColor="@color/inkblack"
-        app:strokeWidth="15dp" />
-
-       android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCategory"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"
-        android:text="Select audio file" />-->
-
-
-    <Button
-        android:id="@+id/btnRecordAudio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imagePlay"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:text="@string/record_audio" />
+        android:minHeight="48dp"
+        android:shadowColor="#000000"
+        android:textAlignment="center"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintBottom_toTopOf="@+id/btnCaptureAudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
     <Button
         android:id="@+id/btnCaptureAudio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnRecordAudio"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:text="Select file" />
-
+        android:layout_width="101dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/btn_circle_style"
+        android:fontFamily="@font/baloo"
+        android:insetLeft="9dp"
+        app:icon="@drawable/ufi_save"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCategory" />
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-        android:layout_below="@+id/btnCaptureAudio"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="0dp"
-
-        android:text="@string/submit" />
-
-    <VideoView
-        android:id="@+id/evView"
-        android:layout_width="match_parent"
-        android:layout_height="191dp"
-        android:layout_below="@+id/btnSubmit"
-
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/insert_video_here" />
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/baloo"
+        android:shadowColor="@color/black"
+        android:text="@string/submit"
+        android:textColor="@color/arsenic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCaptureAudio" />
 
     <ImageView
-        android:id="@+id/imagePlay"
-        android:layout_width="48dp"
-        android:layout_height="43dp"
-        android:layout_below="@+id/progressBar"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/imageView4"
+        android:layout_width="360dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:src="@drawable/btn_style_dropshadow"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCaptureAudio"
+        app:layout_constraintVertical_bias="0.126" />
 
-        android:layout_centerInParent="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="182dp"
-        android:src="@android:drawable/ic_media_play" />
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="163dp"
+        android:layout_height="171dp"
+        android:src="@drawable/echocheer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.653" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="270dp"
-        android:layout_height="29dp"
-        android:layout_below="@+id/etCategory"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="143dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_circle_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
+        android:includeFontPadding="true"
+        android:padding="15dp"
+        android:text="@string/reminder"
+        android:textAlignment="center"
+        android:textColor="@color/arsenic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/tvTimeCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/progressBar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="72dp"
-        android:height="12dp"
-        android:background="@null"
-        android:text="1:00/2:04"
-        android:textColor="#858585"
-        android:textSize="11sp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_circle_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
+        android:includeFontPadding="true"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/arsenic"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="24dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_circle_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
+        android:includeFontPadding="true"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/arsenic"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.427" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

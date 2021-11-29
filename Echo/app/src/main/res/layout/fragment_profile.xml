@@ -35,7 +35,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/btn_circle_style_color"
+        android:background="@drawable/btn_circle_style"
         app:srcCompat="@drawable/ic_baseline_person_24"
         tools:src="@tools:sample/avatars" />
 
@@ -47,7 +47,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="15dp"
         android:layout_toEndOf="@+id/imageView2"
-        android:background="@drawable/et_style_color"
+        android:background="@drawable/et_style"
         android:text="TextView"
         tools:text="Username" />
 
@@ -59,7 +59,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/imageView2"
-        android:background="@drawable/et_style_color"
+        android:background="@drawable/et_style"
         android:text="Total Translations: " />
 
 </RelativeLayout>
