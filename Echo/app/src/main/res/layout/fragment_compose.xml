@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/et_style"
         android:ems="10"
         android:hint="@string/language"
         android:importantForAutofill="no"
@@ -29,7 +28,6 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/et_style"
         android:hint="@string/word_phrase"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -44,7 +42,6 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/et_style"
         android:hint="@string/translation"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -58,7 +55,6 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/et_style"
         android:hint="@string/description"
         android:importantForAutofill="no"
         android:inputType="textMultiLine"
@@ -72,7 +68,6 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:background="@drawable/et_style"
         android:ems="10"
         android:hint="@string/category"
         android:importantForAutofill="no"
@@ -80,11 +75,10 @@
         android:minHeight="48dp" />
 
     <Button
-        android:id="@+id/btnCaptureAudio"
-
+        android:id="@+id/imagePlay"
+        android:layout_below="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etCategory"
         android:layout_marginLeft="155dp"
         android:layout_marginTop="13dp"
         android:background="@drawable/btn_style"
@@ -97,46 +91,97 @@
         app:iconTint="@color/inkblack"
         app:strokeColor="@color/inkblack"
         app:strokeWidth="15dp" />
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCategory"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"
-        android:text="Select audio file" />
+
 
     <Button
         android:id="@+id/btnRecordAudio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCaptureAudio"
+        android:layout_below="@+id/imagePlay"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="-3dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:text="@string/record_audio" />
+
+    <Button
+        android:id="@+id/btnCaptureAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRecordAudio"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="Select file" />
 
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_below="@+id/btnRecordAudio"
+        android:layout_below="@+id/btnCaptureAudio"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="4dp"
-
+        android:layout_marginTop="0dp"
         android:text="@string/submit" />
 
     <VideoView
         android:id="@+id/evView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="191dp"
         android:layout_below="@+id/btnSubmit"
-
-        android:layout_marginTop="8dp"
-
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:text="@string/insert_video_here" />
+
+    <!--<ImageView
+        android:id="@+id/imagePlay"
+        android:layout_width="48dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="182dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:backgroundTintMode="src_over"
+        android:insetLeft="14dp"
+        android:src="@android:drawable/ic_media_play"
+        app:cornerRadius="2dp"
+        app:icon="@android:drawable/ic_media_play"
+        app:iconPadding="8dp"
+        app:iconTint="@color/inkblack"
+        app:strokeColor="@color/inkblack"
+        app:strokeWidth="15dp" />-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="270dp"
+        android:layout_height="29dp"
+        android:layout_below="@+id/etCategory"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/tvTimeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="72dp"
+        android:height="12dp"
+        android:background="@null"
+        android:text="1:00/2:04"
+        android:textColor="#858585"
+        android:textSize="11sp" />
 
 
 </RelativeLayout>
