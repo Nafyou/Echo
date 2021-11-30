@@ -21,6 +21,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.Parse;
+import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseRelation;
@@ -108,8 +109,13 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(view.getContext(), post.getObjectId(), Toast.LENGTH_SHORT).show();
-                    ParseRelation relation = ParseUser.getCurrentUser().getRelation("savedPosts");
-                    relation.add(post);
+                    ParseRelation relation = post.getRelation("usersLiked");
+                    relation.add(ParseUser.getCurrentUser());
+                    try {
+                        post.save();
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
                     //ParseUser.getCurrentUser().put("savedPosts", post.getObjectId());
                     Toast.makeText(view.getContext(), "Post Saved", Toast.LENGTH_SHORT).show();
                 }

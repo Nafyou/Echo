@@ -73,7 +73,7 @@ public class SavedFragment extends Fragment {
                 queryPosts();
             }
         });
-
+        rvPosts = view.findViewById(R.id.rvPostsProfile);
         tvSavedTitle = view.findViewById(R.id.tvSavedTitle);
 
         // TODO: Uncomment after adding PostsAdapter
@@ -91,7 +91,7 @@ public class SavedFragment extends Fragment {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
         // only includes posts that have their object ids in the current user's SavedPosts list
-        query.whereEqualTo(Post.KEY_OBJECT_ID, ParseUser.getCurrentUser().getRelation("savedPosts").toString());
+        query.whereEqualTo("usersLiked", ParseUser.getCurrentUser());
         //query.whereEqualTo(ParseUser.getCurrentUser(), Post.KEY_OBJECT_ID);
         query.setLimit(20);
         //query.addDescendingOrder(Post.KEY_CREATEDAT);
