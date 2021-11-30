@@ -42,6 +42,8 @@ public class ProfileFragment extends Fragment {
     protected List<Post> allPosts;
     private TextView username;
     private Button btnLogout;
+    private TextView tvTranslations;
+    private int postsCount;
     SwipeRefreshLayout swipeContainer;
 
     public ProfileFragment() {
@@ -80,7 +82,7 @@ public class ProfileFragment extends Fragment {
         });
 
         username = view.findViewById(R.id.tvTitle);
-        username.setText(ParseUser.getCurrentUser().getUsername());
+        username.setText("Username: " + ParseUser.getCurrentUser().getUsername());
         rvPosts = view.findViewById(R.id.rvPostsProfile);
         btnLogout = view.findViewById(R.id.btnLogout);
 
@@ -111,6 +113,12 @@ public class ProfileFragment extends Fragment {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
         query.whereEqualTo(Post.KEY_USER, ParseUser.getCurrentUser());
+        try {
+            postsCount = query.count();
+            tvTranslations.setText("Translations: " + postsCount);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         query.setLimit(20);
         query.addDescendingOrder(Post.KEY_CREATEDAT);
         query.findInBackground(new FindCallback<Post>() {

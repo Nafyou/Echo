@@ -95,7 +95,7 @@ public class PostsFragment extends Fragment {
 
 
     // TODO: Uncomment and edit after cleaning up Posts and making PostsAdapter
-    protected void queryPosts() {
+    private void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
         query.setLimit(20);
@@ -108,7 +108,7 @@ public class PostsFragment extends Fragment {
                     return;
                 }
                 for (Post post : posts) {
-                    Log.i(TAG, "Post: " + post.getKeyDescription() + ", username: " + post.getUser().getUsername());
+                    //Log.i(TAG, "Post: " + post.getKeyDescription() + ", username: " + post.getUser().getUsername());
                 }
                 adapter.clear();
                 adapter.addAll(posts);

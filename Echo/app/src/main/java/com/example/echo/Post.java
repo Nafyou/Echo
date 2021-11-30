@@ -8,7 +8,7 @@ import java.io.File;
 
 @ParseClassName("Post")
 public class Post extends ParseObject {
-    public static final String KEY_OBJECT_ID = "objectId";
+    //public static final String KEY_OBJECT_ID = "objectId";
     // define keys that match columns in parse
     public static final String KEY_LANGUAGE = "language";
     public static final String KEY_RECORDING = "recording";
@@ -35,9 +35,9 @@ public class Post extends ParseObject {
 //        put(KEY_LANGUAGE, recording);
 //    }
 
-    public String getKeyObjectID(){
+    /*public String getKeyObjectID(){
         return getString(KEY_OBJECT_ID);
-    }
+    }*/
 
     public String getKeyTranslation(){
         return getString(KEY_TRANSLATION);
