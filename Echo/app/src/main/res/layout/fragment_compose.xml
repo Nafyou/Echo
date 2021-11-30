@@ -29,7 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.499"
+        />
 
     <EditText
         android:id="@+id/tvTimeCounter"
@@ -53,12 +54,12 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="66dp"
         android:background="@drawable/et_style_color"
-        android:backgroundTint="#59FFFFFF"
         android:ems="10"
         android:fontFamily="@font/baloo"
         android:hint="@string/language"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:shadowColor="@color/arsenic"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textDirection="firstStrongRtl"
@@ -75,7 +76,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="66dp"
         android:background="@drawable/et_style_color"
-        android:backgroundTint="#59FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/baloo"
         android:hint="@string/word_phrase"
         android:importantForAutofill="no"
@@ -124,7 +125,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/et_style_color"
-        android:backgroundTint="#59FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/baloo"
         android:hint="@string/translation"
         android:importantForAutofill="no"
@@ -144,7 +145,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/et_style_color"
-        android:backgroundTint="#59FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/baloo"
         android:hint="@string/description"
         android:importantForAutofill="no"
@@ -163,7 +164,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/et_style_color"
-        android:backgroundTint="#59FFFFFF"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/baloo"
         android:hint="@string/category"
@@ -204,7 +205,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btnSubmit"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio"/>
 
     <Button
         android:id="@+id/btnSubmit"
