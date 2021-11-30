@@ -83,6 +83,7 @@ public class ProfileFragment extends Fragment {
 
         username = view.findViewById(R.id.tvTitle);
         username.setText("Username: " + ParseUser.getCurrentUser().getUsername());
+        tvTranslations = view.findViewById(R.id.tvPfpTransl);
         rvPosts = view.findViewById(R.id.rvPostsProfile);
         btnLogout = view.findViewById(R.id.btnLogout);
 
