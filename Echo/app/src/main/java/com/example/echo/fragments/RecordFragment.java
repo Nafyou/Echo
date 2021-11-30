@@ -156,8 +156,8 @@ public class RecordFragment extends Fragment {
 
     private String getRecordingFilePath() {
         ContextWrapper contextWrapper = new ContextWrapper(getContext());
-        File downloadsDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);  //getting directory of the Music file
-        recordedFile = new File(downloadsDirectory, "testRecordingFile" + ".mp3");                //Create an empty audio file (for the recording) at that directory.
+       // File downloadsDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);  //getting directory of the Music file
+        recordedFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "testRecordingFile.mp3");                //Create an empty audio file (for the recording) at that directory.
         return recordedFile.getPath();                  //returning path of the created audio file
     }
 }

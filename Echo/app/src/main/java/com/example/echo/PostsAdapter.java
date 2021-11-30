@@ -1,7 +1,11 @@
 package com.example.echo;
 
+import android.app.Activity;
 import android.content.Context;
+import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.ContentInfo;
 import android.view.LayoutInflater;
@@ -9,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
@@ -18,8 +24,16 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 //Not necessary
 import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.parse.Parse;
+import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParseRelation;
+import com.parse.ParseUser;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -74,6 +88,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView etCategory;
         private MediaPlayer mediaPlayer;
         private Button btnStartAudio;
+        private FloatingActionButton btnSave;
+        private ParseFile recordedFile;
+        private ProgressBar progressBar;
+        private TextView tvTimeCounter;
+        private int currProgress;
+        private int totalTime;
+
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvUsername);
@@ -83,14 +105,61 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             etCategory = itemView.findViewById(R.id.etCategory);
             swipeContainer = itemView.findViewById(R.id.swipeContainer);
             btnStartAudio = itemView.findViewById(R.id.btnStartAudio);
+            btnSave = itemView.findViewById(R.id.btnSave);
+            progressBar = itemView.findViewById(R.id.progressBar);
+            tvTimeCounter = itemView.findViewById(R.id.tvTimeCounter);
         }
+
 
         public void bind(Post post) {
             // Bind the post data to the view elements
+            try {
+                recordedFile = post.getRecording();
+                if (recordedFile == null) {
+                    tvTimeCounter.setText("No audio");
+                }
+                tvTimeCounter.setVisibility(View.VISIBLE);
+                Uri uri = Uri.parse(recordedFile.getFile().getPath());
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                mmr.setDataSource(context,uri);
+                String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+                totalTime = Integer.parseInt(durationStr);
+                tvTimeCounter.setText(Integer.toString(0) + "/" + Integer.toString(totalTime/1000));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
             etTranslation.setText(post.getKeyTranslation());
             etLanguage.setText(post.getKeyLanguage());
             etCategory.setText(post.getKeyCategory());
+
+
+            //TODO: Create a button save that will add a relation of the post into the savedPosts column of the current user
+            btnSave.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(view.getContext(), post.getObjectId(), Toast.LENGTH_SHORT).show();
+                    ParseRelation relation = post.getRelation("usersLiked");
+                    relation.add(ParseUser.getCurrentUser());
+                    try {
+                        post.save();
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    //ParseUser.getCurrentUser().put("savedPosts", post.getObjectId());
+                    Toast.makeText(view.getContext(), "Post Saved", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+
+            btnStartAudio.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    play(view);
+                }
+            });
+
 //            btnStartAudio.setOnClickListener(post.getRecording());
 
             //TODO: Fix everything after writing code for respective functions (getUsername() and audio files)
@@ -101,6 +170,51 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 //            if (image != null) {
 //                Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
 //            }
+        }
+        private void play(View view) {
+            try {
+                tvTimeCounter.setVisibility(View.VISIBLE);
+                Uri uri = Uri.parse(recordedFile.getFile().getPath());
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+                mmr.setDataSource(context,uri);
+                String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+                int millSecond = Integer.parseInt(durationStr);
+
+                totalTime = millSecond;
+                tvTimeCounter.setText(Integer.toString(0) + "/" + Integer.toString(totalTime/1000));
+                currProgress = 0;
+                progressBar.setProgress(0);
+                progressBar.setMax(totalTime);
+
+
+
+                final Thread t = new Thread() {
+                    @Override
+                    public void run() {
+                        while (currProgress < totalTime) {
+                            ((Activity)context).runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if (currProgress % 1000 < 50) {
+                                        tvTimeCounter.setText(currProgress / 1000 + "/" + totalTime / 1000);
+                                    }
+                                }
+                            });
+                            SystemClock.sleep(10);
+                            currProgress += 10;
+                            progressBar.setProgress(currProgress);
+                        }
+                    }
+                };
+                mediaPlayer = new MediaPlayer();       //create the MediaPlayer object
+                mediaPlayer.setDataSource(recordedFile.getUrl());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+
+                t.start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }
