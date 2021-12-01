@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="magenta">#FF2E4A</color>
     <color name="gold">#FFC000</color>
     <color name="sunglow">#FFD437</color>
     <color name="shandy">#FBEE6E</color>
