@@ -1,87 +1,107 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sunglow"
 
+    android:background="@color/sunglow"
     tools:context="com.example.echo.fragments.ComposeFragment">
+
+    <!-- android:background="@drawable/et_style" -->
+
+    <!-- android:background="@drawable/et_style" -->
+
+    <!-- android:background="@drawable/et_style" -->
+
+    <!-- android:background="@drawable/et_style" -->
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="357dp"
+        android:layout_height="565dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/et_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576"
+        app:tint="@color/shandy" />
+
+    <EditText
+        android:id="@+id/tvTimeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="65dp"
+        android:height="12dp"
+        android:background="@null"
+        android:text="1:00/2:04"
+        android:textColor="#858585"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <EditText
         android:id="@+id/etLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="66dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/baloo"
         android:hint="@string/language"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:shadowColor="@color/arsenic"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/etWord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etLanguage"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="66dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
         android:hint="@string/word_phrase"
         android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLanguage"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
-        android:id="@+id/etTranslation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etWord"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/translation"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:minHeight="48dp" />
+    <!-- android:background="@drawable/et_style" -->
 
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etTranslation"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/description"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine"
-        android:minHeight="48dp" />
+    <!-- android:background="@drawable/et_style" -->
+    <!--<Button
+        android:id="@+id/btnCaptureAudio"
 
-    <EditText
-        android:id="@+id/etCategory"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="@string/category"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        android:minHeight="48dp" />
-
-    <Button
-        android:id="@+id/imagePlay"
-        android:layout_below="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/etCategory"
         android:layout_marginLeft="155dp"
         android:layout_marginTop="13dp"
-        android:background="@drawable/btn_style"
         android:backgroundTint="@color/white"
         android:backgroundTintMode="src_over"
         android:insetLeft="14dp"
@@ -92,96 +112,164 @@
         app:strokeColor="@color/inkblack"
         app:strokeWidth="15dp" />
 
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etCategory"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:text="Select audio file" />-->
+
+
+    <EditText
+        android:id="@+id/etTranslation"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
+        android:hint="@string/translation"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWord" />
+
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/baloo"
+        android:hint="@string/description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTranslation" />
+
+    <EditText
+        android:id="@+id/etCategory"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/et_style"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/baloo"
+        android:hint="@string/category"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textDirection="firstStrongRtl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
 
     <Button
         android:id="@+id/btnRecordAudio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imagePlay"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:text="@string/record_audio" />
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/baloo"
+        android:text="@string/record_audio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePlay" />
 
     <Button
         android:id="@+id/btnCaptureAudio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnRecordAudio"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:text="Select file" />
-
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="145dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/baloo"
+        android:text="Select file"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubmit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio"/>
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnCaptureAudio"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="0dp"
-        android:text="@string/submit" />
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="63dp"
+        android:background="@drawable/btn_style"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/baloo"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio" />
 
     <VideoView
         android:id="@+id/evView"
-        android:layout_width="match_parent"
-        android:layout_height="191dp"
-        android:layout_below="@+id/btnSubmit"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/insert_video_here" />
+        android:layout_width="305dp"
+        android:layout_height="70dp"
 
-    <!--<ImageView
+        android:layout_marginTop="650dp"
+        android:text="@string/insert_video_here"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/imagePlay"
-        android:layout_width="48dp"
-        android:layout_height="43dp"
-        android:layout_below="@+id/progressBar"
-        android:layout_alignParentEnd="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="182dp"
-        android:background="@drawable/btn_style"
-        android:backgroundTint="@color/white"
-        android:backgroundTintMode="src_over"
-        android:insetLeft="14dp"
+        android:layout_width="81dp"
+        android:layout_height="77dp"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_circle_style"
+        android:backgroundTint="@color/shandy"
         android:src="@android:drawable/ic_media_play"
-        app:cornerRadius="2dp"
         app:icon="@android:drawable/ic_media_play"
-        app:iconPadding="8dp"
-        app:iconTint="@color/inkblack"
-        app:strokeColor="@color/inkblack"
-        app:strokeWidth="15dp" />-->
+        app:iconSize="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="270dp"
-        android:layout_height="29dp"
-        android:layout_below="@+id/etCategory"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="69dp"
-        android:layout_marginTop="10dp" />
-
-    <EditText
-        android:id="@+id/tvTimeCounter"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/progressBar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="72dp"
-        android:height="12dp"
-        android:background="@null"
-        android:text="1:00/2:04"
-        android:textColor="#858585"
-        android:textSize="11sp" />
+        android:layout_marginTop="32dp"
+        android:progressTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCategory" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="170dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="460dp"
+        android:src="@drawable/echocheer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
