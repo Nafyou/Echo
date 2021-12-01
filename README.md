@@ -29,7 +29,7 @@ An app that allows users to record themselves saying phrases in their language, 
 **Required Must-have Stories**
 
 - [x] Login/Registration Page
-    - [ ] Users can log out
+    - [X] Users can log out
 - [x] Feed using RecyclerView
     - [x] Users can view posts
 
@@ -37,13 +37,14 @@ An app that allows users to record themselves saying phrases in their language, 
     - [X] User can compose a post
     - [X] User can record audio inside app
     - [x] Each post has an audio clip (30sec max), translation, language, cave (category/topic), and user name
-    - [ ] User can delete their own post
+  
 - [x] Bottom Navigation
     - [x] Contains home feed, personal feed, composition, and saved posts
 
 **Optional Nice-to-have Stories**
 
-- [ ] Users can save posts
+- [X] Users can save posts
+- - [ ] User can delete their own post
 - [ ] Users can click on a post to view more detail
 - [ ] Users can follow other users
 - [ ] Users can comment on posts
