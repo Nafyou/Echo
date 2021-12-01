@@ -46,6 +46,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="add"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etLanguage" />
+
     <EditText
         android:id="@+id/etLanguage"
         android:layout_width="335dp"
@@ -68,6 +81,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="add"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLanguage" />
 
     <EditText
         android:id="@+id/etWord"
@@ -120,6 +146,19 @@
         android:text="Select audio file" />-->
 
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="add"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWord" />
+
     <EditText
         android:id="@+id/etTranslation"
         android:layout_width="335dp"
@@ -139,6 +178,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etWord" />
 
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="63dp"
+        android:src="@drawable/btn_style_dropshadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="add"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="335dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/et_style_dropshadow"
+        android:backgroundTint="@color/arsenic"
+        android:backgroundTintMode="add"
+        android:src="@drawable/et_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etDescription" />
 
     <EditText
         android:id="@+id/etDescription"
@@ -270,6 +345,48 @@
         android:src="@drawable/echocheer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/btn_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/btn_style_dropshadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordAudio" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="96dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/arsenic"
+        android:src="@drawable/btn_circle_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="335dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/btn_style_dropshadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnRecordAudio" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
