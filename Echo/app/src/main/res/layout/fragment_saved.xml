@@ -15,7 +15,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="0dp"
-        android:background="#FFC107">
+        android:background="#FFFADD">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPostsProfile"
