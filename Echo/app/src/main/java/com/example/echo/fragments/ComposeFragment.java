@@ -35,6 +35,7 @@ import com.example.echo.Post;
 import com.example.echo.R;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import java.io.File;
@@ -263,6 +264,7 @@ public class ComposeFragment extends Fragment {
         post.setKeyDescription(description);
         post.setKeyTranslation(translation);
         post.setKeyCategory(category);
+        post.setKeyUser(ParseUser.getCurrentUser().getObjectId());
         post.setRecording(new ParseFile(audioFile));
         post.saveInBackground(new SaveCallback() {
             @Override
