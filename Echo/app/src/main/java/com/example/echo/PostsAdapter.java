@@ -108,6 +108,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             btnSave = itemView.findViewById(R.id.btnSave);
             progressBar = itemView.findViewById(R.id.progressBar);
             tvTimeCounter = itemView.findViewById(R.id.tvTimeCounter);
+            tvUsername = itemView.findViewById(R.id.tvUsername);
         }
 
 
@@ -132,6 +133,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             etTranslation.setText(post.getKeyTranslation());
             etLanguage.setText(post.getKeyLanguage());
             etCategory.setText(post.getKeyCategory());
+            tvUsername.setText(post.getUser().getUsername());
 
 
             //TODO: Create a button save that will add a relation of the post into the savedPosts column of the current user

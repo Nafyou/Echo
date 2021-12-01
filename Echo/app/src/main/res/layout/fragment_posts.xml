@@ -9,7 +9,7 @@
         android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFC107">
+        android:background="#FFFADD">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPosts"
