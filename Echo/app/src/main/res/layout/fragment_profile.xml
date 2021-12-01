@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +10,6 @@
         android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
         android:layout_height="575dp"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="22dp"
         android:layout_marginBottom="0dp"
@@ -31,46 +27,38 @@
         android:id="@+id/imageView2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/btn_circle_style"
-        app:srcCompat="@drawable/ic_baseline_person_24"
-        tools:src="@tools:sample/avatars" />
+        android:background="@drawable/btn_circle_style" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="187dp"
-        android:layout_height="42dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="15dp"
-        android:layout_toEndOf="@+id/imageView2"
-        android:text="TextView"
-        tools:text="Username" />
+        android:background="@drawable/et_style"
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/tvPfpTransl"
-        android:layout_width="121dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/tvTitle"
-        android:layout_alignParentEnd="true"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
         android:layout_marginStart="35dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="111dp"
-        android:layout_toEndOf="@+id/imageView2"
+        android:background="@drawable/et_style"
         android:text="Total Translations: " />
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvPfpTransl"
-        android:layout_centerHorizontal="true"
         android:layout_marginStart="35dp"
         android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/imageView2"
         android:text="Logout" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
