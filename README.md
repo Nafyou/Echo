@@ -132,9 +132,11 @@ An app that allows users to record themselves saying phrases in their language, 
     - (Read/Get) Query all posts that is saved by the user
     
 ## Video Walkthroughs
-<img src='login.gif' title='Login' width='150' alt='Login Walkthrough' />
-<img src='profile.gif' title='Profile' width='150' alt='Profile Walkthrough' />
-<img src='feed.gif' title='Feed' width='150' alt='Feed Walkthrough' />
+<p float="left">
+    <img src='login.gif' title='Login' width='150' alt='Login Walkthrough' />
+    <img src='profile.gif' title='Profile' width='150' alt='Profile Walkthrough' />
+    <img src='feed.gif' title='Feed' width='150' alt='Feed Walkthrough' />
+</p>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
