@@ -37,8 +37,13 @@
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.25" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.1" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28974358974358977" />
+        <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_record.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_saved.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.335" />
       </map>
     </option>
   </component>
