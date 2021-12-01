@@ -140,5 +140,3 @@ An app that allows users to record themselves saying phrases in their language, 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-**[Create basic snippets for each Parse network request]**
-**[OPTIONAL: List endpoints if using existing API such as Yelp]**
