@@ -131,5 +131,12 @@ An app that allows users to record themselves saying phrases in their language, 
 - Saved Feed Screen
     - (Read/Get) Query all posts that is saved by the user
     
-**[Create basic snippets for each Parse network request]**
-**[OPTIONAL: List endpoints if using existing API such as Yelp]**
+## Video Walkthroughs
+<p float="left">
+    <img src='login.gif' title='Login' width='150' alt='Login Walkthrough' />
+    <img src='profile.gif' title='Profile' width='150' alt='Profile Walkthrough' />
+    <img src='feed.gif' title='Feed' width='150' alt='Feed Walkthrough' />
+</p>
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
