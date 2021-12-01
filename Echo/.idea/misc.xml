@@ -3,27 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2171875" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_style.xml" value="0.2171875" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style.xml" value="0.2703125" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2171875" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2171875" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/softrectangle.xml" value="0.2171875" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/bg_layerlist.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/bg_style_white.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_circle_style.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_circle_style_color.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_style.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/btn_style_dropshadow.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style_color.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/et_style_dropshadow.xml" value="0.2911458333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2328125" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/drawable/round_rect_shape.xml" value="0.23981481481481481" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/font/baloo.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.4" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.275" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.536" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.275" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_profile.xml" value="0.4" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_record.xml" value="0.275" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_saved.xml" value="0.275" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.275" />
+        <entry key="..\:/Users/csanc/OneDrive/Documents/GitHub/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.275" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.24769230769230768" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.33" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.24769230769230768" />
-        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
-        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_profile2.xml" value="0.32708333333333334" />
-        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/fragment_record.xml" value="0.32708333333333334" />
-        <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.32708333333333334" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.24769230769230768" />
         <entry key="..\:/Users/muzah/AndroidStudioProjects/Echo/Echo/app/src/main/res/xml/fileprovider.xml" value="0.1796875" />
+
         <entry key="..\:/Users/muzah/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_login.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/muzah/Documents/GitHub/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/muzah/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.22" />
@@ -33,12 +42,13 @@
         <entry key="..\:/Users/muzah/Documents/GitHub/Echo/Echo/app/src/main/res/layout/fragment_saved.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/muzah/Documents/GitHub/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.67" />
         <entry key="..\:/Users/muzah/Documents/GitHub/Echo/Echo/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.3203125" />
+
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/activity_record.xml" value="0.2828125" />
         <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_compose.xml" value="0.25" />
-        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.1" />
-        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
-        <entry key="app/src/main/res/layout/fragment_record.xml" value="0.1" />
+        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_posts.xml" value="0.25" />
+        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/fragment_record.xml" value="0.2828125" />
+        <entry key="..\:/Users/nafew/Coding/OpenSource/Echo/Echo/app/src/main/res/layout/item_post.xml" value="0.25" />
       </map>
     </option>
   </component>
