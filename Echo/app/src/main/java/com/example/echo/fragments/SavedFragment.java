@@ -74,7 +74,6 @@ public class SavedFragment extends Fragment {
             }
         });
         rvPosts = view.findViewById(R.id.rvPostsProfile);
-        tvSavedTitle = view.findViewById(R.id.tvSavedTitle);
 
         // TODO: Uncomment after adding PostsAdapter
         allPosts = new ArrayList<>();
