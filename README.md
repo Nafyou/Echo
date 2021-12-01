@@ -44,7 +44,7 @@ An app that allows users to record themselves saying phrases in their language, 
 **Optional Nice-to-have Stories**
 
 - [X] Users can save posts
-- - [ ] User can delete their own post
+- [ ] User can delete their own post
 - [ ] Users can click on a post to view more detail
 - [ ] Users can follow other users
 - [ ] Users can comment on posts
@@ -59,6 +59,7 @@ An app that allows users to record themselves saying phrases in their language, 
    * User can sign up
 * Community Feed (RecyclerView)
     * User can view all posts
+    * User can save posts
 * Personal Feed (Profile)
     * User can view only their own posts 
     * Includes count of uploaded posts
@@ -127,6 +128,8 @@ An app that allows users to record themselves saying phrases in their language, 
 - Profile/Personal Feed Screen
     - (Read/GET) Query logged in user object
     - (Read/GET) Query all posts where user is the author
-
+- Saved Feed Screen
+    - (Read/Get) Query all posts that is saved by the user
+    
 **[Create basic snippets for each Parse network request]**
 **[OPTIONAL: List endpoints if using existing API such as Yelp]**
