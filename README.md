@@ -18,9 +18,6 @@ An app that allows users to record themselves saying phrases in their language, 
 - **Category:** Education/ Language Learning
 - **Mobile:** Android
 - **Story:** Users with unique dialects can help save their language by uploading audio clips sharing simple phrases. 
-- **Market:** *do research*
-- **Habit:**
-- **Scope:**
 
 ## Product Spec
 
